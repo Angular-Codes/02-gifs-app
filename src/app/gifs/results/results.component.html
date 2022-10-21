@@ -1,5 +1,23 @@
 <div class="row p-3">
     <div class="col">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto veritatis placeat in nisi laboriosam. Labore magni non voluptatibus aperiam. Voluptate, placeat? Et labore veritatis officiis reiciendis fugit deserunt sit officia?
+        <div class="row">
+            <div 
+                class="col-md-4 col-sm-6"
+                *ngFor="let gif of results"
+            >
+                <div class="card">
+                    <img 
+                        [src]="gif.images.downsized_medium.url"
+                        class="card-img-top"
+                        alt="..."
+                    >
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{ gif.title }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
